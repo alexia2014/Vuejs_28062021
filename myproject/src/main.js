@@ -15,7 +15,7 @@ new Vue({
     axios
       .get('https://pokeapi.co/api/v2/pokemon')
       .then(response => {
-        this.info = response.data
+        this.info = response.data.results
       })
       .catch(error => {
         console.log(error)
