@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <script type = "text/javascript" src = "src/main.js"></script>
+      <style type="text/css">
+      h1 {
+         margin-bottom: 0;
+       }
+       .pokes {
+           margin: 0 0 2em 0;
+           list-style-type: none;
+           padding: 0;
+           width: 15em;
+         }
+       .pokes .badge {
+           display: inline-block;
+           font-size: small;
+           color: white;
+           padding: 0.8em 0.7em 0 0.7em;
+           background-color:#405061;
+           line-height: 1em;
+           position: relative;
+           left: 0px;
+           top: -4px;
+           height: 1.8em;
+           min-width: 16px;
+           text-align: right;
+           margin-right: .8em;
+           border-radius: 4px 0 0 4px;
+         }
+         </style>
+   </head>
+   <body>
+      <h1>Liste des Pokémons</h1></br>
+    <div id="app">
+      <div
+      v-for="poke in info"
+      class="poke"
+      >
+      <ul class="pokes">
+         <span>Name: </span>{{poke.name}}
+      </ul>
+      <!--<ul class="pokes">
+         <li *ngFor="list of pokemons">
+            <span class="badge">{{poke.id}}</span>{{poke.name}}
+         </li>  
+       </ul>-->
+  </div>
+    </div>
+   </body>
+   
+</html>
